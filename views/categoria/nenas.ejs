@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ../partials/head %>
+        <% include ../partials/menu %>
+    </head>
+    <body class="grey lighten-4">
+        <div class="container">
+            <h2 class="center white-text card-panel purple accent-2">Nenas</h2>
+         
+            <div class="row">               
+                <% products.forEach(function(product) { %>
+                    <div class="col s12 m6 l4">                          
+                        <h5 class="right-align"><%= product.title %></h5>
+                        <a href="/productos/juguete/<%= product.id %>" class="imagen" ><img width="411" height="330" src="<%= product.imageUrl %>"></a><br>
+                        <p class="right-align">$ <%= product.pricing %></p> 
+                        
+                    </div>              
+                <% }); %>
+                
+            </div>
+        </div>
+
+        <% include ../partials/footer %>
+    </body>
+</html>

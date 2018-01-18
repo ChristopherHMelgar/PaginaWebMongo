@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ./partials/head %>
+        <% include ./partials/menu %>
+        <!--<link href="../public/css/imagen.css" rel="stylesheet">-->
+    </head>
+    <body class="grey lighten-5">
+            
+        
+        <div class="container">
+                <h4 class="center white-text card-panel orange accent-3">NUESTROS PRODUCTOS DESTACADOS</h4>
+                <p class="center">Hecha un vistazo a los mejores juguetes y al mejor precio del mercado</p>
+            <div class="row">               
+                <% products.forEach(function(product) { %>
+                    
+                    
+                    <div class="col s12 m6 l4">                          
+                        <h5 class="right-align"><%= product.title %></h5>
+                        <a href="/productos/juguete/<%= product.id %>" class="imagen" ><img width="411" height="330" src="<%= product.imageUrl %>"></a><br>
+                        <p class="right-align">$ <%= product.pricing %></p> 
+                    >    
+                    </div>              
+                <% }); %>
+                
+            </div>
+        </div>           
+        
+        <% include ./partials/footer %>                       
+    </body>
+</html>

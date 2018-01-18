@@ -1,0 +1,14 @@
+.box-category{
+    
+    display: block;    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+

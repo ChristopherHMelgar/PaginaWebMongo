@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ../partials/head %>
+    </head>
+    <body>
+        <div class="container">
+            <h3>Login Administradores</h3>
+                <form action="/admin" method="POST">
+                        <div class="row">
+                            <div class="input-field col s8">                           
+                                <input type="password" name="password" placeholder="Contraseña de administrador">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s8">
+                                <button class="btn orange accent-3" type="submit">Ingresar</button>
+                            </div>
+                        </div>                       
+                </form>
+        </div>
+    </body>
+</html>

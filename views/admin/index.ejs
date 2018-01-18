@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ../partials/head %>
+    </head>
+    <body class="grey lighten-5">
+            
+        <h3 class="center white-text card-panel orange accent-3">Panel de Administracion</h3>
+        <table class="centered">
+            <caption><h4>Productos Actuales</h4></caption>
+            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre</th>
+                                <th>Categoria</th>
+                                <th>Descripcion</th>
+                                <th>Precio</th>
+                                <th>Imagenes</th>
+                                <th>Accion</th>
+                            </tr>
+            </thead>
+            <tbody>
+                            <% products.forEach(function(product) { %>
+                                     
+                            <tr>
+                                <td><%= product.id %></td>
+                                <td><%= product.title %></td>
+                                <td><%= product.categoria %></td>
+                                <td><%= product.description %></td>
+                                <td>$<%= product.pricing %></td>
+                                <td><a href="<%= product.imageUrl %>">Ver Imagen</a></td>
+                                <td>
+                                    <a href="/productos/edit/<%= product.id %>">Editar</a> &nbsp
+                                    <a href="/productos/delete/<%= product.id %>">Eliminar</a>
+                                </td>
+                            </tr>
+                           
+                            <% }); %>
+            </tbody>
+        </table>
+            
+        
+    </body>
+</html>

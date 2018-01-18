@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ../partials/head %>
+        <% include ../partials/menu %>
+
+    </head>
+    <body class="grey lighten-4">
+            <div class="left-align container white">
+                <div class="row valign-wrapper">
+                        <div class="center container col s12 m8 l9">
+                                <h4 ><%= product.title %></h3>
+                                <img src="<%= product.imageUrl %>" class="responsive-img">
+                                <br>                               
+                                <p><%= product.description %></p>
+                        </div>   
+                        <div class="center-align container col s12 m4 l3">
+                                <h3>$ <%= product.pricing %></h4>
+                            <a class="waves-effect orange accent-3 btn">Comprar</a>
+                        </div>                                                           
+                </div>                       
+                                                                                      
+            </div>
+            
+
+
+            <% include ../partials/footer %> 
+    </body>
+</html>
+
