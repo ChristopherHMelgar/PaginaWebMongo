@@ -1,0 +1,13 @@
+
+
+@media (min-width:1024px) {
+
+    #banner img{
+        height: 450px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+       
+    }
+}
